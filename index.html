@@ -1,43 +1,468 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Your Name | Civil Engineering</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prashant Bist | Civil Engineering</title>
+
+    <meta name="description"
+          content="Prashant Bist - Graduate Student in Civil Engineering, Structural Engineering and Computational Mechanics.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: #243447;
+            background: #f5f7fa;
+        }
+
+        /* Navigation */
+        nav {
+            background: #17365d;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+        }
+
+        .nav-container {
+            max-width: 1050px;
+            margin: auto;
+            padding: 0 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-name {
+            color: white;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero */
+        .hero {
+            background: white;
+            padding: 90px 25px;
+            border-bottom: 1px solid #e1e6eb;
+        }
+
+        .hero-container {
+            max-width: 1050px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            color: #17365d;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .hero h2 {
+            font-size: 1.45rem;
+            font-weight: 500;
+            color: #526779;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 1.08rem;
+            color: #536574;
+            max-width: 720px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 28px;
+            padding: 12px 22px;
+            background: #17365d;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+        .button:hover {
+            background: #24558c;
+            transform: translateY(-1px);
+        }
+
+        /* Main content */
+        main {
+            max-width: 1050px;
+            margin: auto;
+            padding: 60px 25px;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 30px;
+            padding: 35px 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        section h2 {
+            color: #17365d;
+            font-size: 1.65rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e6ebf0;
+            padding-bottom: 10px;
+        }
+
+        section p {
+            color: #526574;
+            margin-bottom: 12px;
+        }
+
+        /* Research cards */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .research-item {
+            padding: 20px;
+            background: #f5f7fa;
+            border-left: 4px solid #17365d;
+            border-radius: 5px;
+        }
+
+        .research-item h3 {
+            color: #17365d;
+            margin-bottom: 6px;
+            font-size: 1.05rem;
+        }
+
+        .research-item p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Skills */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #edf2f7;
+            color: #31485c;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.92rem;
+        }
+
+        /* Links */
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .link-button {
+            display: inline-block;
+            padding: 11px 18px;
+            border: 1px solid #cbd5df;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #17365d;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+        .link-button:hover {
+            background: #17365d;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background: #17365d;
+            color: #dce6ef;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 0.85rem;
+            }
+
+            .hero {
+                padding: 60px 20px;
+            }
+
+            .hero-container {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .hero h2 {
+                font-size: 1.2rem;
+            }
+
+            main {
+                padding: 35px 15px;
+            }
+
+            section {
+                padding: 25px 22px;
+            }
+
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Prashant Bist</h1>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-name">Prashant Bist</div>
 
-    <h2>Graduate Student in Civil Engineering</h2>
+            <div>
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#skills">Skills</a>
+                <a href="#links">Links</a>
+            </div>
+        </div>
+    </nav>
 
-    <p>
-        Welcome to my GitHub landing page. I am a graduate student
-        interested in structural mechanics.
-    </p>
 
-    <h3>Research Interests</h3>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-container">
 
-    <ul>
-        <li>Structural Engineering</li>
-        <li>Fresh and Hardened Concrete</li>
-        <li>3D-Printed Concrete</li>
-        <li>Soft Materials</li>
-        <li>Non-Newtonian Fluids</li>
-        <li>AI applications in Computational Mechanics</li>
-    </ul>
+            <div class="hero-text">
 
-    <h3>Professional Website</h3>
+                <h1>Prashant Bist</h1>
 
-    <p>
-        Visit my
-        <a href="https://sites.google.com/view/prashantbist">professional website</a>.
-    </p>
+                <h2>Graduate Student in Civil Engineering</h2>
 
-    <h3>GitHub</h3>
+                <p>
+                    Welcome to my GitHub landing page. I am a graduate student
+                    in Civil Engineering with interests in structural engineering,
+                    concrete materials, computational mechanics, and emerging
+                    computational technologies.
+                </p>
 
-    <p>
-        This page is hosted using GitHub Pages.
-    </p>
+                <a class="button"
+                   href="https://sites.google.com/view/prashantbist"
+                   target="_blank">
+                    Visit My Professional Website
+                </a>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- About -->
+        <section id="about">
+
+            <h2>About Me</h2>
+
+            <p>
+                I am a graduate student in Civil Engineering interested in
+                understanding and solving challenging problems in structural
+                engineering and mechanics.
+            </p>
+
+            <p>
+                My academic interests combine engineering mechanics,
+                experimental research, computational methods, and emerging
+                technologies for civil engineering applications.
+            </p>
+
+        </section>
+
+
+        <!-- Research -->
+        <section id="research">
+
+            <h2>Research Interests</h2>
+
+            <div class="research-grid">
+
+                <div class="research-item">
+                    <h3>Structural Engineering</h3>
+                    <p>
+                        Structural analysis, behavior, and design of
+                        civil engineering structures.
+                    </p>
+                </div>
+
+                <div class="research-item">
+                    <h3>Fresh and Hardened Concrete</h3>
+                    <p>
+                        Investigation of concrete behavior and material
+                        properties in fresh and hardened states.
+                    </p>
+                </div>
+
+                <div class="research-item">
+                    <h3>3D-Printed Concrete</h3>
+                    <p>
+                        Additive manufacturing and emerging technologies
+                        for concrete construction.
+                    </p>
+                </div>
+
+                <div class="research-item">
+                    <h3>Soft Materials</h3>
+                    <p>
+                        Mechanics and behavior of soft and complex
+                        engineering materials.
+                    </p>
+                </div>
+
+                <div class="research-item">
+                    <h3>Non-Newtonian Fluids</h3>
+                    <p>
+                        Mechanics and computational modeling of
+                        non-Newtonian fluid behavior.
+                    </p>
+                </div>
+
+                <div class="research-item">
+                    <h3>AI & Computational Mechanics</h3>
+                    <p>
+                        Applications of artificial intelligence and
+                        computational methods to engineering mechanics.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Skills -->
+        <section id="skills">
+
+            <h2>Technical Skills</h2>
+
+            <div class="skills">
+
+                <span class="skill">Python</span>
+                <span class="skill">MATLAB</span>
+                <span class="skill">NumPy</span>
+                <span class="skill">SciPy</span>
+                <span class="skill">National Instruments Data Aquistion System</span>
+                <span class="skill">Computational Mechanics</span>
+                <span class="skill">MTS Hydraulic Actuators</span>
+                <span class="skill">GitHub</span>
+                <span class="skill">Arduino</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- GitHub / Professional Links -->
+        <section id="links">
+
+            <h2>Professional Links</h2>
+
+            <p>
+                Explore my professional website and GitHub projects
+                using the links below.
+            </p>
+
+            <div class="links">
+
+                <a class="link-button"
+                   href="https://sites.google.com/view/prashantbist"
+                   target="_blank">
+                    Professional Website
+                </a>
+
+                <a class="link-button"
+                   href="https://github.com/prashant473"
+                   target="_blank">
+                    GitHub Profile
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Prashant Bist
+        </p>
+
+        <p>
+            Graduate Student in Civil Engineering
+        </p>
+
+    </footer>
 
 </body>
 </html>
